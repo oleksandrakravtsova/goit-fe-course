@@ -1,65 +1,75 @@
-.wrapper {
-  width: 1200px;
-  margin: 0 auto;
+html{
+  box-sizing:border-box;
 }
 
-nav {
-  display: block;
-  width: 570px;
-  margin: 0 auto;
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
 }
 
-nav ul {
-  list-style-type: none;
-  margin-top: 70px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  float: left;
-  margin-left: 100px;
-}
-
-nav ul li:first-child {
-  margin-left: 15px;
-}
-
-li a {
-  display: block;
-  font-family: Playfair Display, serif;
+body {
+  font-family: "Playfair Display";
   color: #626262;
-  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  text-align: center;
+ }
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 44;
+}
+
+.page-header {
+  margin-bottom: 70px;
+}
+
+.site-navigation {
+ list-style-type: none;
+ padding: 0;
+ text-align: center;
+ font-size: 0;
+}
+
+
+.site-navigation li{
+  display: inline-block;
+}
+
+.site-navigation a {
+  font-size: 14px;
+  display: block;
+  padding: 28px;
+  color: #626262;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-li a:hover {
+.site-navigation a:hover {
   color: #03a9f4;
 }
 
-main {
-  width: 960px;
-  height: 1000px;
-  margin: auto;
+.site-navigation a:active {
+  color: #03a9f4;
 }
 
-main ul li {
+.main {
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+.main li {
+  list-style: none;
   display: inline-block;
   width: 420px;
-  float: left;
-  margin-top: 100px;
-}
-
-.left {
-  margin-left: 0px;
-}
+  margin-right: 15px;
+  margin-bottom: 50px;
+  }
 
 .right {
-  margin-left: 60px;
+  margin-right: 0;
 }
 
 .category {
@@ -72,38 +82,33 @@ main ul li {
   text-transform: uppercase;
 }
 
-h2 {
-  font-family: Playfair Display, serif;
-  color: #626262;
+.news-header {
   font-size: 30px;
-  font-weight: 400;
-  text-align: left;
+  margin: 0;
 }
 
 .news {
-  font-family: Playfair Display, serif;
-  color: #626262;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
+ font-size: 14px;
 }
 
-.button {
-  text-align: center;
-  margin: 0 auto;
-}
-
-button {
+.button-load-more {
+  display: block;
   width: 160px;
   height: 60px;
-  margin-top: 60px;
-  margin-bottom: 70px;
-  background: white;
+  margin: 0 auto;
   font-family: Playfair Display, serif;
   color: #626262;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
   border: 1px solid #626262;
-}
+  background: white;
+  cursor: pointer;
+  outline:none;
+  transition-duration: 0.2s;
+  }
+
+.button-load-more:hover {
+ color: #03a9f4;
+ border: 1px solid #03a9f4;
+    }
