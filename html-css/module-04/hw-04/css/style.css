@@ -20,6 +20,21 @@ img {
   height: auto;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .clearfix::after {
   display: table;
   content: "";
@@ -38,14 +53,13 @@ img {
 }
 
 .logo {
-  padding: 0;
-  float: left;
   font-size: 30px;
   font-weight: 300;
-  text-align: left;
   text-transform: uppercase;
   text-decoration: none;
   color: #555252;
+  display: inline-block;
+  line-height: 30px;
 }
 
 .logo::first-letter {
@@ -94,21 +108,18 @@ img {
 }
 
 .featured-products {
-  margin: 0 auto;
-  padding: 0;
   margin-bottom: 105px;
 }
 
 .section-header {
-  display: block;
-  padding: 0;
   margin: 0 auto;
   font-size: 48px;
   font-weight: 900;
-  line-height: 32px;
+  line-height: 48px;
   text-align: center;
   text-transform: uppercase;
   color: #515151;
+  margin-bottom: 92px;
 }
 
 .section-header::after {
@@ -117,13 +128,8 @@ img {
   width: 164px;
   height: 7px;
   background-color: #1abc9c;
-  padding: 0;
   margin: 0 auto;
   margin-top: 32px;
-}
-
-.products {
-  margin-bottom: 92px;
 }
 
 .list-of-products,
@@ -182,7 +188,6 @@ img {
 .item-price {
   width: 55px;
   background-color: rgba(255, 255, 255, 0.44);
-  text-align: center;
 }
 
 .news-h {
@@ -192,8 +197,6 @@ img {
 .news-article {
   float: left;
   width: 350px;
-  margin: 0;
-  padding: 0;
   margin-right: 30px;
   text-align: center;
 }
@@ -213,7 +216,7 @@ img {
   font-size: 18px;
   font-weight: 600;
   text-align: left;
-  line-height: 26px;
+  line-height: 29px;
   color: #555252;
 }
 
@@ -223,8 +226,6 @@ img {
   width: 136px;
   height: 3px;
   background-color: #1abc9c;
-  padding: 0;
-  margin: 0;
   margin-top: 15px;
 }
 
@@ -242,15 +243,12 @@ img {
   display: block;
   width: 160px;
   height: 51px;
-  margin: 0;
-  padding: 0;
   padding: 15px 38px;
   border-radius: 3px;
   background-color: #4ec6ab;
   font-family: "Open Sans", sans-serif;
   font-size: 15.9px;
   font-weight: 300;
-  line-height: 26px;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
