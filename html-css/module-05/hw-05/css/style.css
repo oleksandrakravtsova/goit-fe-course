@@ -116,7 +116,7 @@ input[type="radio"].visually-hidden {
 /* SLIDER */
 
 .slider {
-  background-image: url(/img/slider-img.jpg);
+  background-image: url(../img/slider-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
