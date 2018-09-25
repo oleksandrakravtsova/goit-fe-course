@@ -41,20 +41,15 @@ input[type="radio"].visually-hidden {
   clear: both;
 }
 
-.wrapper {
-  width: 1600px;
-  margin: 0 auto;
-  padding: 38px 0 0;
-}
-
 .container {
   margin: 0 auto;
   width: 1110px;
 }
 
-.page-header {
-  margin-bottom: 32px;
+.nav {
+  padding: 38px 0 32px;
 }
+
 
 .logo {
   font-size: 30px;
@@ -116,16 +111,10 @@ input[type="radio"].visually-hidden {
 /* SLIDER */
 
 .slider {
-  background-image: url(../img/slider-img.jpg);
+  background-image: url(../img/slider-image.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.slider-overlay {
-  width: 1600px;
-  height: 600px;
-  background-color: rgba(0, 0, 2, 0.52);
 }
 
 .slider-title {
@@ -139,21 +128,22 @@ input[type="radio"].visually-hidden {
   width: 104px;
   height: 104px;
   background-color: rgba(78, 198, 171, 0.65);
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #ffffff;
-  font-size: 100px;
-  text-align: center;
   cursor: pointer;
 }
 
 .slider-ctrl-prev {
   left: 0;
+  background-image: url(../img/ctr-prev.png)
 }
 
 .slider-ctrl-next {
   right: 0;
+  background-image: url(../img/ctr-next.png)
 }
 
 .slider-ctrl:hover {
@@ -269,6 +259,10 @@ input[type="radio"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.44);
 }
 
+.item-price::before {
+  content: '\0024';
+}
+
 /* OVERLAY */
 
 .item-overlay {
@@ -307,13 +301,11 @@ input[type="radio"].visually-hidden {
 
 .icon a {
   display: block;
-  color: #ffffff;
   height: 50px;
   width: 50px;
   border: #ffffff solid 1px;
-  font-size: 30px;
-  line-height: 30px;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -323,23 +315,38 @@ input[type="radio"].visually-hidden {
   background-color: #323232;
 }
 
-.icon a span {
-  padding: 9px;
+.like {
+  background-image: url(../img/like.png);
 }
 
-.icon a .pe-7s-cart {
-  float: left;
+.share {
+  background-image:url(../img/share.png);
 }
 
-.icon a .add-to-chart {
+.time {
+  background-image:url(../img/time.png);
+}
+
+.add-to-chart {
   float: right;
-  padding: 9px 15px 9px 0;
+  padding: 9px 15px 9px 9px;
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   font-size: 14px;
   font-weight: 400;
   line-height: 32px;
   text-transform: uppercase;
+}
+
+.add-to-chart::before {
+  content: '';
+  float: left;
+  width: 30px;  
+  height: 30px;
+  margin-right: 10px;
+  background-image: url(../img/cart.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .icon a:hover {
@@ -352,16 +359,11 @@ input[type="radio"].visually-hidden {
 .footer {
   background: #323232;
   width: 100%;
-  height: 88px;
-  position: relative;
-}
+ }
 
 .copyright {
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 30px 0;
   font-family: "Open Sans", sans-serif;
   color: #fefefe;
   font-size: 16px;
