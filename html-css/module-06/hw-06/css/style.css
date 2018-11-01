@@ -42,14 +42,18 @@ input[type="radio"].visually-hidden {
 
 /* MENU */
 
+.page-header {
+  margin-bottom: 100px;
+}
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 0 150px;
+  min-height: 78px;
 }
 
 .logo {
+  display: block;
   text-decoration: none;
   color: #95e1d3;
   font-size: 30px;
@@ -77,6 +81,7 @@ span {
 }
 
 .site-navigation-list a {
+  display: block;
   color: #95e1d3;
   font-size: 14px;
   font-weight: 400;
@@ -150,6 +155,9 @@ span {
 .service-type {
   display: flex;
   width: calc(33.333% - 20px);
+  height: 73px;
+  padding-left: 82px;
+  position: relative;
 }
 
 .service-type:not(:nth-last-child(-n + 3)) {
@@ -161,7 +169,9 @@ span {
   content: "";
   width: 32px;
   height: 32px;
-  padding: 0 30px;
+  position: absolute;
+  left: 25px;
+  top: 0;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -192,7 +202,7 @@ span {
 
 .service-name,
 .team-member-name {
-  margin: 0 0 6px;
+  margin: 0;
   font-size: 14px;
   font-weight: 400;
   color: #333333;
@@ -207,6 +217,11 @@ span {
   font-weight: 400;
   line-height: 24px;
   color: #999999;
+}
+
+.service-descr {
+  position: absolute;
+  top: 28px;
 }
 
 /* TEAM */
@@ -227,26 +242,17 @@ span {
 }
 
 .team-member {
-  width: calc(33.333% - 30px);
-}
-
-.team-image {
   position: relative;
-  background: #95e1d3;
-  cursor: pointer;
-  margin-bottom: 30px;
 }
 
-.team-image img {
+.image,
+.overlay {
   transition: transform 200ms linear;
 }
 
-.team-image:hover img {
-  transform: translate(-10px, -10px);
-}
-
-.team-image .overlay {
+.overlay {
   position: absolute;
+  display: block;
   background: linear-gradient(
     90deg,
     rgba(243, 129, 129, 0.9),
@@ -255,12 +261,16 @@ span {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 470px;
   opacity: 0;
-  transition: transform 200ms linear;
+  z-index: 2;
 }
 
-.team-image:hover .overlay {
+.team-member:hover .image {
+  transform: translate(-10px, -10px);
+}
+
+.team-member:hover .overlay {
   opacity: 1;
   transform: translate(-10px, -10px);
 }
@@ -315,12 +325,17 @@ span {
 }
 
 .occupation {
+  margin: 0;
   font-family: Roboto;
   color: #999999;
   font-size: 15px;
   font-weight: 300;
   font-style: italic;
   text-align: center;
+}
+
+.team-descr {
+  margin-top: 30px;
 }
 
 /* FOOTER */
@@ -334,12 +349,14 @@ span {
 }
 
 .copyright {
+  margin: 0;
   color: #333333;
   font-size: 14px;
   font-weight: 400;
 }
 
 .color {
+  text-decoration: none;
   color: #f38181;
 }
 
