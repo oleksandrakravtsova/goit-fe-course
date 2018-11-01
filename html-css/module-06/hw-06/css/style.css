@@ -153,9 +153,7 @@ span {
   justify-content: space-around;
 }
 .service-type {
-  display: flex;
   width: calc(33.333% - 20px);
-  height: 73px;
   padding-left: 82px;
   position: relative;
 }
@@ -208,6 +206,9 @@ span {
   color: #333333;
   text-transform: uppercase;
 }
+.service-name {
+  margin-bottom: 20px;
+}
 
 .service-descr,
 .header-descr {
@@ -219,10 +220,6 @@ span {
   color: #999999;
 }
 
-.service-descr {
-  position: absolute;
-  top: 28px;
-}
 
 /* TEAM */
 
@@ -268,6 +265,8 @@ span {
 
 .team-member:hover .image {
   transform: translate(-10px, -10px);
+  box-shadow: 10px 10px #95e1d3;
+  
 }
 
 .team-member:hover .overlay {
