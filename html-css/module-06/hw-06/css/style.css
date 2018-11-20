@@ -258,17 +258,20 @@ span {
   width: 100%;
   height: 470px;
   opacity: 0;
-  transition: transform 200ms linear;
+  transition: opacity 200ms linear;
+  transform: translate(-10px, -10px);
 }
 
-.team-member:hover .image {
+.image {
+  transition: box-shadow 200ms linear;
   transform: translate(-10px, -10px);
+}
+.team-member:hover .image {
   box-shadow: 10px 10px #95e1d3;
 }
 
 .team-member:hover .overlay {
   opacity: 1;
-  transform: translate(-10px, -10px);
 }
 
 /* SOCIAL ICONS */
@@ -293,6 +296,7 @@ span {
   background-position: center;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 200ms linear;
 }
 
 .facebook {
