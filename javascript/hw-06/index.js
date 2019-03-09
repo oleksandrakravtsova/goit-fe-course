@@ -3,71 +3,71 @@
 class Notepad {
   constructor(notes = []) {
     this._notes = notes;
+  }
 
-    this.findNoteById = function(id) {
-      for (const note of notes) {
-        if (id === note.id) {
-          return note;
-        }
-      }
-    };
-
-    this.saveNote = function(note) {
-      return notes.push(note);
-    };
-
-    this.deleteNote = function(id) {
-      for (let i = 0; i < notes.length; i += 1) {
-        if (id === notes[i].id) {
-          notes.splice(i, 1);
-        }
-      }
-      return;
-    };
-
-    this.updateNoteContent = function(id, updatedContent) {
-      const note = this.findNoteById(id);
-      const keys = Object.keys(updatedContent);
-
-      for (let key of keys) {
-        note[key] = updatedContent[key];
-      }
-
-      return note;
-    };
-
-    this.updateNotePriority = function(id, priority) {
-      const note = this.findNoteById(id);
-      if (note) {
-        note.priority = priority;
+  findNoteById(id) {
+    for (const note of this._notes) {
+      if (id === note.id) {
         return note;
       }
-    };
+    }
+  }
 
-    this.filterNotesByQuery = function(query) {
-      const queryNotes = [];
-      for (const note of notes) {
-        const title = note.title.toLowerCase();
-        const body = note.body.toLowerCase();
-        if (
-          title.includes(query.toLowerCase()) ||
-          body.includes(query.toLowerCase())
-        ) {
-          queryNotes.push(note);
-        }
-      }
-      return queryNotes;
-    };
+  saveNote(note) {
+    return this._notes.push(note);
+  }
 
-    this.filterNotesByPriority = function(priority) {
-      const priorityNotes = [];
-      for (const note of notes) {
-        if (priority === note.priority) {
-          priorityNotes.push(note);
-        }
+  deleteNote(id) {
+    for (let i = 0; i < this._notes.length; i += 1) {
+      if (id === this._notes[i].id) {
+        this._notes.splice(i, 1);
       }
-      return priorityNotes;
-    };
+    }
+    return;
+  }
+
+  updateNoteContent(id, updatedContent) {
+    const note = this.findNoteById(id);
+    const keys = Object.keys(updatedContent);
+
+    for (let key of keys) {
+      note[key] = updatedContent[key];
+    }
+
+    return note;
+  }
+
+  updateNotePriority(id, priority) {
+    const note = this.findNoteById(id);
+    if (note) {
+      note.priority = priority;
+      return note;
+    }
+  }
+
+  filterNotesByQuery(query) {
+    const queryNotes = [];
+    for (const note of this._notes) {
+      const title = note.title.toLowerCase();
+      const body = note.body.toLowerCase();
+      if (
+        title.includes(query.toLowerCase()) ||
+        body.includes(query.toLowerCase())
+      ) {
+        queryNotes.push(note);
+      }
+    }
+    return queryNotes;
+  }
+
+  filterNotesByPriority(priority) {
+    const priorityNotes = [];
+    for (const note of this._notes) {
+      if (priority === note.priority) {
+        priorityNotes.push(note);
+      }
+    }
+    return priorityNotes;
   }
 
   get notes() {
