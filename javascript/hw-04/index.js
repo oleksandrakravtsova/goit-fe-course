@@ -160,9 +160,7 @@ console.log(
  * Обновим контент заметки с id 3
  */
 notepad.updateNoteContent(3, {
-  title: "Get comfy with React.js or Vue.js",
-  date: "12-01-19"
-});
+  title: "Get comfy with React.js or Vue.js"});
 console.log(
   "Заметки после обновления контента заметки с id 3: ",
   notepad.getNotes()

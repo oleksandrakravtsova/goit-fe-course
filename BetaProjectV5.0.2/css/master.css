@@ -1,0 +1,22 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+body{
+  background: #f9f9f9;
+  margin: 0;
+}
+main{
+    background: #fff;
+    min-height: 98vh;
+   
+    color: #2c3e50;
+  
+}
+.Gallery{
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media(max-width:768px){
+  main{
+      margin: 1vh;
+      padding: 0 5vw;
+  }
+}
